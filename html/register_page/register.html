@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <script src="https://kit.fontawesome.com/3efd231502.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="header">
+            <!-- bounce animation with no "squish" -->
+            <i class="fa-solid fa-frog fa-bounce"
+                style="--fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1;"></i>
+            <h1>Registration Form</h1>
+        </div>
+
+        <form>
+            <div>
+                <!-- username -->
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter your username">
+            </div>
+
+            <div>
+                <!-- email -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+
+            <div>
+                <!-- password -->
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+
+            <div>
+                <!-- phone number -->
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number">
+            </div>
+
+            <div>
+                <!-- date of birth date -->
+                <label for="dob">Date Of Birth:</label>
+                <input type="date" id="dob">
+            </div>
+
+            <div>
+                <!-- address textarea -->
+                <label for="address">Address:</label>
+                <textarea id="address" cols="15" rows="2"></textarea>
+            </div>
+
+            <div>
+                <!-- gender radio button -->
+                <label>Gender:</label>
+                <input type="radio" name="gender" id="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="other">
+                <label for="other">Other</label>
+            </div>
+
+            <div>
+                <!-- hobbies checkbox -->
+                <label>Choose your Hobbies:</label><br>
+                <input type="checkbox" name="hobbies" id="coding">
+                <label for="coding">Coding</label><br>
+                <input type="checkbox" name="hobbies" id="gaming">
+                <label for="gaming">Gaming</label><br>
+                <input type="checkbox" name="hobbies" id="travelling">
+                <label for="travelling">Travelling</label>
+            </div>
+
+            <div>
+                <!-- select course select -->
+                <h2>Courses</h2>
+                <label for="courses">Choose a Course</label>
+                <select id="courses">
+                    <option disabled selected value="">-Select-</option>
+                    <option value="mern">MERN - Full Stack Web Development</option>
+                    <option value="mean">MEAN - Full Stack Web Development</option>
+                    <option value="python">Python, Data Science & ML</option>
+                </select>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" name="submit">Submit</button>
+                <button type="reset" name="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
