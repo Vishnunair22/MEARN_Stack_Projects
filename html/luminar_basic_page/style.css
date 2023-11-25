@@ -1,0 +1,56 @@
+.image{
+    width: 100%;
+    height: 100px;
+}
+.nav-bar{
+    background-color: brown;
+}
+.nav-list{
+    text-decoration: none;
+    padding: 5px;
+    color: burlywood;
+}
+h1{
+    font-size: 60px;
+}
+#para1{
+    font-size: 25px;
+}
+#para2{
+    font-size: 25px;
+}
+#para3{
+    font-size: 18px;
+}
+#para4{
+    font-size: 18px;
+}
+#visit-link{
+    text-decoration: none;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+}
+hr{
+    margin-top: 20px;
+}
+h2{
+    font-size: 40px;
+}
+#list-items{
+    line-height: 1;
+    font-size: 18px;
+}
+#second-list{
+    line-height: 1;
+    font-size: 18px;
+}
+table,tr,th,td{
+    border: 1px solid;
+    box-shadow: bisque; 
+    border-collapse: collapse;
+    padding: 10px;
+    font-size: 18px;
+}
+
+ 
