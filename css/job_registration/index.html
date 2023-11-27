@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Poppins:wght@500&display=swap">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <form>
+            <div class="input-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label for="gender">Select your Gender</label>
+                <select id="gender">
+                    <option selected hidden value="">-Select-</option>
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                    <option value="">Other</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="quali">Select your highest qualification</label>
+                <select id="quali">
+                    <option selected hidden value="">-Select-</option>
+                    <option value="">Under Graduate</option>
+                    <option value="">Post Graduate</option>
+                    <option value="">Diploma/Other Correspondence Course</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="cv">Select your CV/Resume</label>
+                <input type="file" id="cv">
+            </div>
+            <div class="button">
+                <button id="submit">Submit</button>
+                <button id="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
