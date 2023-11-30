@@ -1,7 +1,8 @@
 *{
     padding: 0px;
     margin: 0px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Sofia', cursive;
+    font-size: 18px;
 }
 .header{
     width: 100%;
@@ -37,10 +38,17 @@ nav{
     margin-bottom: 20px;
 }
 #user-name{
-    font-size: 50px;
+    color: blue;
+    font-size: 60px;
 }
 #lname{
-    color: orange;
+    color: green;
+    font-size: 60px;
+}
+#user-details{
+    margin-top: 10px;
+    line-height: 1.2;
+    font-size: 18px;
 }
 #download{
     text-decoration: none;
@@ -50,6 +58,10 @@ nav{
     border-radius: 5px;
     margin-top: 30px;
     display: inline-block;
+}
+a#download:hover{
+    background-color: green;
+    color: white;
 }
 .home-image{
     width: 45%;
@@ -71,4 +83,57 @@ nav{
 }
 .home-image:hover .girl{
     left: 40%;
+}
+#about{
+    margin: 15% 8% 0 8%;
+}
+.section-head{
+    text-align: center;
+ }
+.mainhead{
+    font-size: 35px;
+    color: blue;
+}
+.subhead{
+    font-size: 25px;
+    color: orange;
+}
+.about-body{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+}
+.about-img>img{
+    width: 90%;
+}
+.about-content{
+    font-size: 18px;
+    text-align: justify;
+}
+.information{
+    margin-top: 1rem;
+    font-size: 18px;    
+}
+.info-box{
+    margin-bottom: 1rem;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+.info-box>span{
+    margin-left: 1rem;
+}
+#skill{
+    margin: 8% 8% 0px 8%;
+}
+.skill-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    margin-top: 20px;
+}
+.skill-img>img{
+    width: 90%;
 }
