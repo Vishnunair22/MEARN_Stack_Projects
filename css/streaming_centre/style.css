@@ -216,6 +216,7 @@ nav a:active{
     font-weight: 600;
     padding: 5px 5px;
     border-radius: 10px;
+    cursor: pointer;   
 }
 /* -plan details- */
 .plan-item p{
@@ -243,6 +244,7 @@ nav a:active{
     padding: 5px 5px;
     border-radius: 10px;
     border-radius: 10px;
+    cursor: pointer;
 }
 /* -pay button- */
 #pay{
