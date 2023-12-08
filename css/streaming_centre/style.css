@@ -16,6 +16,8 @@ header{
     background-color: black;
     width: 100%;
     overflow: hidden;
+    position: sticky;
+    top: 0;
 }
 /* -logo- */
 header span{
@@ -136,7 +138,7 @@ nav a:active{
     justify-content: space-around;
     align-items: center;
     flex-wrap: nowrap;
-    margin-top: 20px;
+    margin-top: 30px;
  }
  /* -trending item- */
  .trending-item{
@@ -198,7 +200,7 @@ nav a:active{
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 30px;
  }
  /* -plan items */
  .plan-item{
