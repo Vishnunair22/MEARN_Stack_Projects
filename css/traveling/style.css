@@ -171,6 +171,9 @@ footer{
     font-size: 20px;
 }
 @media only screen and (max-width: 767px) {
+    header{
+        background-size: cover !important;
+    }
     h1{
         font-size: 38px !important;
     }
@@ -178,5 +181,7 @@ footer{
         font-size: 30px !important;
     }
     h3{
+        
         font-size: 24px !important;
     }
+}
