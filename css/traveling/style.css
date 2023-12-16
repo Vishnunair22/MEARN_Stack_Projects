@@ -98,16 +98,30 @@ main h2{
 }
 .cols2{
     width: 100%;
-    height: 400px;
+    height: 550px;
 }
 .sub-col2{
     width: 100%;
-    height: 400px;
+    height: 100%;
 }
 .sub-col2 img{
     width: 100%;
-    height: 100%;
+    height: 400px;
 }
+/* north india */
+.north-india{
+    height: 580px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+
+}
+.cols3{
+    height: 100% !important;
+}
+.cols3 img{
+    height: 50% !important;
+}
+/* reviews */
 .cols1{
     margin-top: 20px !important;
     height: 300px !important;
@@ -115,13 +129,22 @@ main h2{
 .cols1 h3{
     text-align: center;
 }
+.cols2{
+    height: 400px !important;
+}
+/* premium */
+.premium{
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+/* services */
 .services{
     width: 100%;
     height: 200px;
 }
 /* footer section */
 footer{
-    margin-top: 100px;
+    margin-top: 120px;
     border: 1px solid;
 }
 .colsf{
@@ -161,5 +184,3 @@ footer{
 .img-foot{
     font-size: 20px;
 }
-}
- 
