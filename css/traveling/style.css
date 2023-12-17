@@ -173,7 +173,18 @@ footer{
 @media only screen and (max-width: 767px) {
     header{
         background-size: cover !important;
+        width: 100% !important;
         margin-bottom: 2% !important;
+        position: relative;
+    }
+    .small-list{
+        position: absolute;
+        display: inline-block;
+        right: 0;
+        top: 10px;
+    }
+    .small-bar{
+        font-size: 15px !important;
     }
     h1{
         font-size: 38px !important;
