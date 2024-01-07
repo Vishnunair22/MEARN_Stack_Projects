@@ -64,21 +64,23 @@ nav button{
     margin-top: 100px;
 }
 .header-content h1{
+    width: 100%;
     font-size: 60px;
     line-height: 70px;
     font-weight: 600;
-    max-width: 650px;
+    max-width: 850px;
 }
 .header-content h3 {
     font-weight: 400;
     font-size: 20px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 .header-content p{
     font-size: 18px;
 }
 .email-sign-up{
-    background: #fff;
+    background: #303030;
     border-radius: 4px;
     display: flex;
     align-items: center;
@@ -87,6 +89,7 @@ nav button{
 }
 .email-sign-up input{
     flex: 1;
+    background: transparent;
     border: 0;
     outline: 0;
     margin-left: 20px;
@@ -98,7 +101,13 @@ nav button{
     color: #fff;
     font-size: 16px;
     cursor: pointer;
-    padding: 15px 30px;
+    padding: 20px 30px;
+}
+.sub-sign{
+    font-size: 18px;
+    margin-left: 3px;
+    margin-top: 5px;
+    background: transparent;
 }
 /* main content */
 .features{
@@ -231,7 +240,7 @@ footer .language-btn{
     margin-bottom: 10px;
 }
 /* small screen code */
-@media only screen and (max-width:600px){
+@media only screen and (max-width:750px){
     .logo{
         width:100px;
     }
@@ -281,5 +290,8 @@ footer .language-btn{
     }
     label::after{
         font-size: 22px;
+    }
+    footer h2{
+        font-size: 18px;
     }
 }
