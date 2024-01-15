@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+}
+body{
+    background-color: black;
+    color: #fff;
+}
+/* header */
+header{
+    width: 100%;
+    min-height: 100vh;
+    font-size: 18px;
+}
+/* nav bar */
+nav{
+    width: 100%;
+    padding: 20px 162px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* logo */
+.logo{
+    width: 160px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.logo img{
+    width: 48px;
+    height: 48px;
+}
+.logo span{
+    margin-left: 5px;
+}
+/* nav links */
+.nav-links li{
+    display: inline;
+    list-style: none;
+    margin-right: 20px;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+.nav-links li:hover{
+    background-color: teal;
+    color: #fff;
+    padding: 10px 10px;
+}
+/* nav button */
+.nav-button{
+    padding: 18px 24px;
+    background-color: #141414;
+    color: #fff;
+}
+.nav-button a{
+    text-decoration: none;
+    color: #fff;
+}
+.nav-button a:hover{
+    background-color: blue;
+    color: #fff;
+    padding: 18px 24px;
+}
+/* hero */
+.hero{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+/* text col */
+.txt-col{
+    padding: 20px 162px;
+    margin-top: 100px;
+    flex-basis: 50%;
+}
+/* heading */
+.txt-col h1{
+    width: 600px;
+    font-size: 60px;
+    margin-top: 10px;
+}
+/* sub heading */
+.txt-col p{
+    margin-top: 10px;
+    color: #999999;
+}
+/* buttons */
+.txt-col button{
+    border: 0;
+    outline: 0;
+    padding: 18px 24px;
+    margin-top: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.txt-col button:hover{
+    background-color: orange;
+    color: black;
+    padding: 18px 24px;
+}
+/* lrn btn */
+.lrn{
+    background-color: #262626;
+    color: #fff;
+    margin-right: 10px;
+}
+/* prop btn */
+.prop{
+    background-color: #703BF7;
+    color: #fff;
+}
+/* sub text */
+.sub-txt{
+    margin-top: 50px;
+    display: flex;
+}
+/* item */
+.item1{
+    margin-right: 50px; 
+}
+.item1 h2{
+    font-size: 40px;
+}
+.item1 p{
+    font-size: 18px;
+    color: #999999;
+    width: 200px;
+}
+/* img col */
+.img-col{
+    flex-basis: 50%;
+    display: flex;
+    margin-right: 100px;
+}
+.img1{
+    position: relative;
+    top: 140px;
+    right: 150px;
+}
+.arrow{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+.img2{
+    width: 100%;
+    padding-right: 100px;
+}
+.hero-image{
+     display: block;
+    right: 40%;
+    margin-right: 30px;
+    width: 100%;
+    height: 120%;
+    size: 400px;
+ }
+ /* sub section */
+ .sub-section{
+    padding: 20px 162px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+ }
+ .sub-section img{
+    display: block;
+    margin: 0px auto;
+    height: 50%;
+ }
+ .item p{
+    font-weight: bold;
+  }
+  /* main */
+ main{
+    margin-top: 100px;
+    position: relative;
+    font-size: 18px;
+  }
+  .design{
+    padding: 10px 150px;
+  }
+  main h2{
+    padding: 0px 162px;
+    font-size: 48px;
+  }
+  main p{
+    padding: 10px 162px;
+    font-size: 18px;
+    color: #999999;
+  }
+  .more{
+    position: absolute;
+    top: 10%;
+    left: 80%;
+    cursor: pointer;
+  }
+  /* row */
+  .row{
+    margin-top: 50px;
+    padding: 20px 162px;
+    display: flex;
+    justify-content: space-between;
+  }
+  /* cols */
+  .cols h3{
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  .cols p{
+    text-align: left;
+    padding: 10px 0px;
+  }
+  .bedroon{
+    padding-left: 10px;
+  }
+  .bedroom, .bathroom{
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+  .price, .view{
+    border: 0;
+    outline: 0;
+    padding: 18px 24px;
+    border-radius: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .price:hover, .view:hover{
+    background-color: orangered;
+    color: #fff;
+    padding: 18px 40px;
+  }
+  .price{
+    position: relative;
+    background-color: black;
+    color: #fff;
+    font-size: 24px;
+    margin-top: 30px;
+  }
+  .l1{
+    position: absolute;
+    font-size: 18px;
+    color: #999999;
+    top: 0px;
+    background-color: transparent;
+  }
+  .l2{
+    font-size: 24px;
+    color: #fff;
+    background-color: transparent;
+  }
+  .view{
+    background-color: #703BF7;
+    color: #fff;
+    margin-top: 20px;
+  }
+  .reviews{
+    position: relative;
+    margin-top: 100px;
+  }
+  .review{
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    cursor: pointer;
+  }
+  .stars, .lin1, .lin2{
+    margin-top: 20px;
+    display: inline-block;
+    margin-right: 50px;
+  }
+  .stars{
+    font-size: 20px;
+    letter-spacing: 5px;
+  }
+  .lin1{
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .lin2{
+    font-size: 18px;
+  }
+ /* users */
+ .profile{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 10px;
+ }
+ .name{
+    margin-left: 10px;
+ }
+  .lin3{
+    font-size: 20px;
+    color: #fff;
+ }
+ .lin4{
+    color: #999999;
+ }
+ /* faq */
+ .faq{
+    position: relative;
+    margin-top: 100px;
+ }
+ .v-faq{
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    cursor: pointer;
+ }
+ .faq .cols{
+    margin-right: 50px;
+ }
+ .faq .cols h3{
+    font-size: 24px;
+ }
+ .faq .cols p{
+    margin-top: 20px;
+ }
+.read{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.read3{
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.read:hover, .read3:hover{
+    background-color: blue;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 10px;
+}
+.explore{
+    margin-top: 100px;
+    position: relative;
+}
+.explore-prop{
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    cursor: pointer;
+    padding: 18px 24px;
+    cursor: pointer;
+    background-color: #703BF7;
+    color: #fff;
+}
+/* footer */
+footer{
+    margin-top: 100px;
+    font-size: 18px;
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logo-foot{
+    margin-bottom: 20px;
+}
+input{
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    background-color: black;
+    color: #fff;
+}
+.send{
+    border: 0;
+    outline: 0;
+    background-color: green;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.heading{
+    color: #999999;
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.col li{
+    list-style: none;
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+/* copyright */
+.copy-right{
+    padding: 20px 162px;
+}
+.terms{
+    display: inline-block;
+    margin-left: 20px;
+}
+]
