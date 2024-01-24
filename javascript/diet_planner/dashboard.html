@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Planner - Dashboard</title>
+    <script src="https://kit.fontawesome.com/3efd231502.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <!-- header section -->
+    <header>
+        <!-- navigation bar -->
+        <nav>
+            <!-- logo -->
+            <div class="logo">
+                <i class="fa-regular fa-calendar fa-2x plan"></i>
+                <span class="logo-txt1"> Diet</span><span class="logo-txt2">Planner</span>
+            </div>
+            <!-- nav-links -->
+            <div class="nav-links">
+                <a href="#activities">Activities</a>
+                <input type="button" value="Log Out" onclick="logOut()">
+            </div>
+        </nav>
+        <!-- hero -->
+        <div class="txt-col">
+            <h1>Welcome back <span class="two" id="displayUser">User</span></h1>
+            <p>Track your meals and plan your diet.Your daily activities appear below.</p>
+        </div>
+        <!-- row -->
+        <div class="row">
+            <!-- first col -->
+            <div class="cols">
+                <input type="button" value="View Diet Chart" id="dietPlan" class="btn">
+                <div id="diet">
+                    <h3>Your Diet Chart</h3>
+                    <span><i class="fa-regular fa-circle"></i>Fruits</span><br>
+                    <span><i class="fa-regular fa-circle"></i>Vegitables</span><br>
+                    <span><i class="fa-regular fa-circle"></i>Nuts</span><br>
+                    <span><i class="fa-regular fa-circle"></i>Milk</span><br>
+                    <span><i class="fa-regular fa-circle"></i>Eggs</span><br>
+                    <span class="lst">Generated based on your activities</span>
+                </div>
+            </div>
+
+            <!-- second col -->
+            <div class="cols">
+                <input type="button" value="Calculate Your BMI" id="toggleButton" class="btn">
+                <div id="content">
+                    <h3>Calculate Your Body Mass Indes</h3>
+                    <form id="myForm">
+                        <label for="height">Enter Your Height</label>
+                        <input type="text" id="height" placeholder="in meters"><br>
+                        <label for="weight">Enter Your Weight</label>
+                        <input type="text" id="weight" placeholder="in kelograms"><br>
+                        <span id="displayValue">bmi value</span><br>
+                        <input type="button" value="Calculate" class="calculate" onclick="calculateValue()">
+                        <input type="button" value="Clear" class="clear" onclick="resetForm()">
+                    </form>
+                </div>
+            </div>
+            <!-- third col -->
+            <div class="cols">
+                <input type="button" value="Track Your Activities" class="btn">
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <h3>Your Activities</h3>
+        <p>From Dec-Jan 2024</p>
+    </main>
+
+</body>
+<script>
+    // Display user on dashboard page
+    if (localStorage.getItem('user')) {
+        displayUser.innerHTML = localStorage.getItem('user');
+    }
+    else {
+        alert('Please login');
+        window.location = "login.html";
+    }
+    // Log out
+    const logOut = () => {
+        localStorage.removeItem('user');
+        window.location.href = "login.html";
+    }
+    // diet plan
+    document.getElementById('dietPlan').addEventListener('click', function () {
+        var content = document.getElementById('diet');
+        if (content.style.display === 'none') {
+            content.style.display = 'block';
+        } else {
+            content.style.display = 'none';
+        }
+    });
+    // bmi
+    document.getElementById('toggleButton').addEventListener('click', function () {
+        var content = document.getElementById('content');
+        if (content.style.display === 'none') {
+            content.style.display = 'block';
+        } else {
+            content.style.display = 'none';
+        }
+    });
+    // calculate bmi
+    const calculateValue = () => {
+        var height = document.getElementById('height').value;
+        var weight = document.getElementById('weight').value;
+        if (height === '' || weight === '') {
+            alert("Enter your height and weight");
+        } else {
+            var bmi = (weight / (height * height));
+            bmi = Math.round(bmi);
+            localStorage.setItem("bmiValue", bmi);
+        }
+        displayValue.innerHTML = localStorage.getItem("bmiValue");
+    }
+    // Clear form
+    const resetForm = () => {
+        var form = document.getElementById('myForm');
+        form.reset();
+    }
+</script>
+
+</html>

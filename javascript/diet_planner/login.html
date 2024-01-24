@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Planner - Login Page</title>
+    <script src="https://kit.fontawesome.com/3efd231502.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <!-- header section -->
+    <header>
+        <!-- navigation bar -->
+        <nav>
+            <!-- logo -->
+            <div class="logo">
+                <i class="fa-regular fa-calendar fa-2x plan"></i>
+                <span class="logo-txt1"> Diet</span><span class="logo-txt2">Planner</span>
+            </div>
+            <!-- nav-links -->
+            <div class="nav-links">
+                <a href="#contact">Contact Us</a>
+            </div>
+        </nav>
+        <!-- hero -->
+        <div class="row">
+            <!-- text col -->
+            <div class="txt-col1">
+                <h1>Login To <span class="one">Diet</span><span class="two">Planner</span></h1>
+                <p>Enter your account details below.</p>
+                <form id="myForm">
+                    <label for="user1"><span id="user"><i class="fa-solid fa-user"></i></span> Username</label>
+                    <input type="text" id="user1" required class="input-field" placeholder="username..."><br>
+                    <label for="password"><span id="pswd"><i class="fa-solid fa-lock"></i></span>Password</label>
+                    <input type="password" id="password" required class="input-field" placeholder="password.."><br>
+                    <input type="button" value="Login" class="login" onclick="logIn()">
+                    <input type="button" value="Clear" class="clear" onclick="clearForm()">
+                </form>
+            </div>
+        </div>
+    </header>
+    <footer>
+        <p>&copy;Copyright 2024 Diet Planner.All Rights &reg; Reserved.</p>
+    </footer>
+    <script src="connect.js"></script>
+</body>
+
+</html>

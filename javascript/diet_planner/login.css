@@ -1,0 +1,88 @@
+/* row */
+.row1{
+    display: flex;
+    padding: 10px 100px;
+}
+/* text col */
+.txt-col1 {
+    margin-top: 50px;
+}
+
+.txt-col1 h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.txt-col1 p {
+    font-size: 22px;
+    opacity: 0.6;
+    margin-bottom: 20px;
+}
+
+/* buttons */
+.login, .clear {
+    margin-top: 30px;
+    border: 0;
+    outline: 0;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    margin-right: 5px;
+}
+
+.login {
+    background-color: blue;
+}
+
+.clear {
+    background-color: red;
+}
+
+.login:hover, .clear:hover {
+    background-color: orangered;
+}
+#user i, #pswd i{
+    color: teal;
+}
+#pswd {
+    display: inline-block;
+    margin-right: 4px;
+}
+.input-field{
+    outline: 0;
+    border: 0;
+    background-color: #fff;;
+    color: black;
+    margin-left: 5px;
+}
+label{
+    font-size: 22px;
+}
+label, .input-field{
+    margin-bottom: 10px;
+}
+/* image */
+.img-col{
+    flex-basis: 40%;
+}
+.img-col img{
+    width: 70%;
+    height: 70%;
+}
+footer{
+    text-align: left;
+}
+/* mobile */
+@media only screen and (max-width: 750px) {
+    body{
+        font-size: 18px;
+    }
+    .txt-col1 h1{
+        font-size: 28px;
+    }
+    .txt-col1 p{
+        font-size: 18px;
+    }
+}
