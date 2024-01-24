@@ -26,9 +26,10 @@ header{
     background-color: blue;
     color: #fff;
     font-size: 24px;
-    padding: 20px 20px;
+    padding: 10px 20px;
     cursor: pointer;
     margin-top: 50px;
+    border-radius: 5px;
 }
 .btn:hover{
     background-color: orangered;
