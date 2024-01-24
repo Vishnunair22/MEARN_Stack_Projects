@@ -26,19 +26,24 @@
             </div>
         </nav>
         <!-- hero -->
-
-        <!-- text col -->
-        <div class="txt-col1">
-            <h1>Login To <span class="one">Diet</span><span class="two">Planner</span></h1>
-            <p>Enter your account details below.</p>
-            <form id="myForm">
-                <label for="user1"><span id="user"><i class="fa-solid fa-user"></i></span> Username</label>
-                <input type="text" id="user1" required class="input-field" placeholder="username..."><br>
-                <label for="password"><span id="pswd"><i class="fa-solid fa-lock"></i></span>Password</label>
-                <input type="password" id="password" required class="input-field" placeholder="password.."><br>
-                <input type="button" value="Login" class="login" onclick="logIn()">
-                <input type="button" value="Clear" class="clear" onclick="clearForm()">
-            </form>
+        <div class="row">
+            <!-- text col -->
+            <div class="txt-col1">
+                <h1>Login To <span class="one">Diet</span><span class="two">Planner</span></h1>
+                <p>Enter your account details below.</p>
+                <form id="myForm">
+                    <label for="user1"><span id="user"><i class="fa-solid fa-user"></i></span> Username</label>
+                    <input type="text" id="user1" required class="input-field" placeholder="username..."><br>
+                    <label for="password"><span id="pswd"><i class="fa-solid fa-lock"></i></span>Password</label>
+                    <input type="password" id="password" required class="input-field" placeholder="password.."><br>
+                    <input type="button" value="Login" class="login" onclick="logIn()">
+                    <input type="button" value="Clear" class="clear" onclick="clearForm()">
+                </form>
+            </div>
+            <!-- image col -->
+            <div class="img-col">
+                <img src="./images/login image.jpg" alt="login">
+            </div>
         </div>
     </header>
     <script src="connect.js"></script>

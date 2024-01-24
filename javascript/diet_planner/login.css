@@ -1,23 +1,12 @@
-/* row */
-.txt-col1{
-    padding: 10px 100px;
-}
 /* text col */
-.txt-col1 {
-    margin-top: 50px;
+.txt-col1 h1{
+    font-size: 40px;
 }
-
-.txt-col1 h1 {
-    font-size: 50px;
-    margin-bottom: 20px;
-}
-
 .txt-col1 p {
     font-size: 22px;
     opacity: 0.6;
     margin-bottom: 20px;
 }
-
 /* buttons */
 .login, .clear {
     margin-top: 30px;
