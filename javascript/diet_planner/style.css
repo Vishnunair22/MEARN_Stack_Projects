@@ -53,7 +53,7 @@ nav{
     margin-top: 50px;
     display: flex;
     justify-content: space-evenly;
-    padding: 10px 50px;
+    padding: 10px 100px;
     flex-wrap: nowrap;
     height: 100%;
 }
@@ -122,7 +122,7 @@ main h3{
     color: teal;
 }
 .cols .icon i{
-    font-size: 50px;
+    font-size: 40px;
 }
 .cols .ln{
     margin-bottom: 10px;
@@ -188,11 +188,22 @@ footer .row1{
         flex-wrap: wrap;
         padding: 5px 50px;
         flex-direction: column-reverse;
+        align-items: center;
+    }
+    .img-col{
+        align-items: center;
+        position: relative;
+    }
+    .home{
+        position: absolute;
     }
     .row h1{
         font-size: 28px;
     }
     .row p{
         font-size: 18px;
+    }
+    .cols{
+        margin-bottom: 20px;
     }
 }
