@@ -114,11 +114,11 @@ main p{
     text-align: left;
     opacity: 0.6;
 }
-.cols span{
+.cols .line{
     display: block;
     text-align: center;
 }
-.cols span i{
+.cols .line i{
     font-size: 40px;
     color: teal;
 }
@@ -128,14 +128,4 @@ main p{
 .cols .l2{
     font-size: 20px;
     opacity: 0.6;
-}
-/* mobile */
-@media only screen and (max-width: 750px) {
-    .txt-col h1{
-        font-size: 28px;
-    }
-    main h3{
-        margin-top: 100px;
-    }
-    
 }
