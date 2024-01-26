@@ -135,7 +135,7 @@ main p{
     opacity: 0.6;
 }
 /* mobile */
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 950px){
     header{
         height: 120vh;
         margin-bottom: 20px;

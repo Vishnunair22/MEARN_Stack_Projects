@@ -60,7 +60,7 @@ label, .input-field{
     height: 70%;
 }
 /* mobile */
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 950px) {
     body{
         font-size: 18px;
     }
