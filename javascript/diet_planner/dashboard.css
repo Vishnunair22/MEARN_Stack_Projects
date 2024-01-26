@@ -3,14 +3,14 @@ header{
     margin-bottom: 20px;
 }
 .nav-links a{
-    font-size: 18px;
+    font-size: 20px;
 }
 .nav-links input{
     border: 0;
     outline: 0;
     background-color: crimson;
     color: #fff;
-    font-size: 18px;
+    font-size: 20px;
     padding: 10px 10px;
     cursor: pointer;
 }
