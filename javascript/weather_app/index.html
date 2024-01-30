@@ -18,7 +18,7 @@
         <div class="weather">
             <img src="./images/rain.png" alt="rain" class="weather-icon">
             <h1 class="temp">22°C</h1>
-            <h2>Norway</h2>
+            <h2 class="city">Norway</h2> <!-- Added class="city" to h2 tag -->
         </div>
         <div class="details">
             <div class="col">
@@ -32,11 +32,35 @@
                 <img src="./images/wind.png" alt="wind">
                 <div>
                     <p class="wind">25 Km/Hour</p>
-                    <p class="wind">Wind Speed</p>
+                    <p class="wind-speed">Wind Speed</p> <!-- Changed class to wind-speed for differentiation -->
                 </div>
             </div>
         </div>
     </div>
+    <!-- script -->
+    <script>
+        const apiKey = '8ac5c4d57ba6a4b3dfcf622700447b1e';
+        const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=metric&';
+        const searchBox = document.querySelector(".search input");
+        const searchBtn = document.querySelector(".search button");
+
+        searchBtn.addEventListener('click', () => {
+            checkWeather(searchBox.value);
+        });
+
+        async function checkWeather(city) {
+            const response = await fetch(apiUrl + 'q=' + city + '&appid=' + apiKey);
+            var data = await response.json();
+            console.log(data);
+            document.querySelector(".city").innerHTML = data.name;
+            document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
+            document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+            document.querySelector(".wind").innerHTML = data.wind.speed + " Km/Hrs";
+        }
+
+        // You may want to call checkWeather with a default city or remove this line if not needed
+        // checkWeather('DefaultCity');
+    </script>
 </body>
 
 </html>
