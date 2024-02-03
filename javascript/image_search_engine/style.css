@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #39297b;
+    color: #fff;
+}
+/* nav bar */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 100px;
+}
+/* logo */
+.logo{
+    cursor: pointer;
+}
+.logo .icon i{
+    font-size: 30px;
+ }
+ .lft{
+    color: goldenrod;
+    font-size: 30px;
+ }
+ .rght{
+    color: orangered;
+    font-size: 30px;
+ }
+ /* nav links */
+ .nav-links a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    color: cyan;
+ }
+ .nav-links a:hover,  .nav-links button:hover{
+    background-color: blue;
+    color: #fff;
+    padding: 5px 10px;
+ }
+ /* button */
+ .nav-links button{
+    border: 0;
+    outline: 0;
+    margin-left: 10px;
+    font-size: 20px;
+    background-color: #ff3929;
+    color: cyan;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+ }
+ /* h1 */
+h1{
+    text-align: center;
+    margin: 100px auto 50px;
+    font-weight: 600;
+    font-size: 50px;
+}
+form{
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    background-color: #434989;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+form input{
+    flex: 1;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: #fff;
+    font-size: 18px;
+    padding: 0 30px;
+    border-radius: 5px;
+}
+form input::placeholder{
+    color: #fff;
+    opacity: 0.6;
+}
+form button{
+    height: 100%;
+    padding: 0 30px;
+    background-color: #ff3929;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* main */
+#search-results{
+   width: 80%;
+   margin: 100px auto 50px;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-gap: 40px;
+}
+#search-results img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+/* button */
+#show-more-btn{
+    background-color: #ff3929;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin: 10px auto 100px;
+    display: none;
+}
+/* footer */
+#footer{
+    display: none;
+}
