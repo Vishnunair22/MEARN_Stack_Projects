@@ -122,3 +122,27 @@ form button{
 #footer{
     display: none;
 }
+/* mobile */
+@media only screen and (max-width: 767px) {
+    nav{
+        padding: 5px 50px;
+    }
+    .logo i{
+        font-size: 24px;
+    }
+    .lft, .rght{
+        font-size: 24px;
+    }
+    .nav-links button{
+        font-size: 18px;
+    }
+    h1{
+        font-size: 30px;
+    }
+    #search-results{
+        grid-template-columns: 1.5fr 1.5fr;
+    }
+    #search-results img{
+        height: 180px;
+    }
+}
