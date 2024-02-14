@@ -1,0 +1,41 @@
+.flex-container1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.flex-items{
+    width: 350px;
+    height: 400px;
+}
+.flex-items h3{
+    font-size: 24px;
+}
+.flex-items p{
+    font-size: 16px;
+}
+.flex-items button{
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: green;
+}
+.flex-items button:hover{
+    background-color: teal;
+}
+.base{
+    background-color: green;
+}
+.ultra{
+    background-color: orangered;
+}
+@media only screen and (max-width: 767px) {
+    .flex-container1{
+        flex-wrap: wrap;
+    }
+    .flex-items{
+        margin-top: 20px;
+        height: 300px;
+    }
+}
