@@ -1,0 +1,46 @@
+.footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer-item{
+    width: 400px;
+    height: 300px;
+}
+.footer-item h3{
+    font-size: 22px;
+    text-align: center;
+}
+.footer-item p{
+    font-size: 18px;
+    text-align: center;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.foot-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.foot-icons span i{
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.foot-icn, .foot-wrd1, .foot-wrd2{
+    margin-right: 5px;
+    font-size: 22px;
+    display: inline-block;
+    cursor: pointer;
+    color: teal;
+}
+.ftr-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media only screen and (max-width: 767px) {
+    .footer-container{
+        flex-wrap: wrap;
+}
+
