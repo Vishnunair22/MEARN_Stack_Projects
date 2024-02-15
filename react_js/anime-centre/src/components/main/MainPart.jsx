@@ -5,7 +5,7 @@ const main = () => {
   return (
     <>
     {/* trending */}
-    <div className='trend' id='trendind'>
+    <div className='trend' id='trending'>
         <h2>Trending Today</h2>
         <p>Catch the top trending animes here.</p>
         <div className="flex-container">
