@@ -1,0 +1,30 @@
+.hero{
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.txt-col{
+    margin-top: 100px;
+}
+.txt-col h1{
+    font-size: 50px;
+}
+.txt-col p{
+    font-size: 24px;
+    opacity: 0.6;
+}
+.img-col img{
+    width: 100%;
+    height: 100%;
+}
+@media only screen and (max-width: 767px) {
+    .txt-col h1{
+        font-size: 30px;
+    }
+    .txt-col p{
+        font-size: 18px;
+    }
+    .hero{
+        flex-direction: column-reverse;
+    }
+}

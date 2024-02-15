@@ -8,18 +8,23 @@
     height: 400px;
 }
 .flex-items h3{
-    font-size: 24px;
+    font-size: 26px;
+    text-align: center;
 }
 .flex-items p{
-    font-size: 16px;
+    font-size: 18px;
+    text-align: center;
 }
 .flex-items button{
     border: 0;
     outline: 0;
     cursor: pointer;
+    font-size: 18px;
     padding: 10px 20px;
     border-radius: 5px;
     color: green;
+    display: block;
+    margin: 0 auto;
 }
 .flex-items button:hover{
     background-color: teal;

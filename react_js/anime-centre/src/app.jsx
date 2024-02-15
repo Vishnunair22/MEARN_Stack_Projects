@@ -5,12 +5,14 @@ import NavBar from './components/navbar/NavBar';
 import MainPart from './components/main/MainPart';
 import PlanPart from './components/plan/PlanPart';
 import FooterPart from './components/footer/FooterPart';
+import HeroPart from './components/hero/HeroPart';
 
 const app = () => {
   return (
     <>
     <header>
       <NavBar/>
+      <HeroPart/>
     </header>
     <main>
       <MainPart/>
