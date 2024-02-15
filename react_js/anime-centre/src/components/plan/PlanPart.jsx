@@ -13,7 +13,7 @@ const PlanPart = () => {
                 <p>Episode watch limit.</p>
                 <p>Video might buffer.</p>
                 <p>Servers may occassionally be down.</p>
-                <button>Continue Watching</button>
+                <button className='free'>Continue Watching</button>
             </div>
             <div className="flex-items">
                 <h3>Base Plan</h3>

@@ -25,18 +25,24 @@
     font-size: 18px;
     padding: 10px 20px;
     border-radius: 5px;
-    color: green;
     display: block;
     margin: 0 auto;
 }
+.free{
+    background-color: purple;
+    color: #fff;
+}
 .flex-items button:hover{
-    background-color: teal;
+    background-color: blue;
+    color: #fff;
 }
 .base{
-    background-color: green;
+    background-color: teal;
+    color: #fff;
 }
 .ultra{
     background-color: orangered;
+    color: #fff;
 }
 @media only screen and (max-width: 767px) {
     .flex-container1{
