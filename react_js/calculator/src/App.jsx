@@ -7,7 +7,7 @@ function App() {
   };
 
   const handleClear = () => {
-    document.getElementById('display').value = '';
+    document.getElementById('display').value = ' ';
   };
 
   const calculateResult = () => {

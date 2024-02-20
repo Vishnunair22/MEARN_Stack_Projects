@@ -1,0 +1,48 @@
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    position: absolute;
+    top: 20%;
+    left: 45%;
+}
+.calculator{
+    margin-top: 200px;
+    border: 2px solid blue;
+    background-color: black;
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    padding: 20px 20px;
+}
+.calculator input{
+    margin-bottom: 20px;
+    border: 2px solid blue;
+    background-color: #fff;
+    color: black;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    font-size: 22px;
+    text-align: right;
+    padding-right: 5px;
+}
+.calculator button{
+    border: 0;
+    outline: 0;
+    padding: 20px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    font-size: 22px;
+    box-shadow: cadetblue;
+}
+.calculator button:hover{
+    background-color: blue;
+    color: #fff;
+    padding: 10px 20px;
+}
