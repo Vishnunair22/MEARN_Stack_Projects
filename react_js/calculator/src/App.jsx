@@ -10,6 +10,9 @@ function App() {
     let clearValue =  document.getElementById('display').value
     document.getElementById('display').value = clearValue.slice(0,-1);
   };
+  const clearAll = () => {
+    document.getElementById('display').value = '';
+  };
 
   const calculateResult = () => {
     const result = eval(document.getElementById('display').value);
@@ -56,7 +59,7 @@ function App() {
           </button>
         </div>
         <div>
-          <button onClick={() => handleClear()}>AC</button>
+          <button onClick={() => clearAll()}>AC</button>
           <button onClick={() => handleButtonClick('0')}>0</button>
           <button onClick={() => handleButtonClick('.')}>.</button>
           <button onClick={() => calculateResult()} aria-label="result">
