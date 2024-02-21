@@ -7,7 +7,8 @@ function App() {
   };
 
   const handleClear = () => {
-    document.getElementById('display').value = '';
+    let clearValue =  document.getElementById('display').value
+    document.getElementById('display').value = clearValue.slice(0,-1);
   };
 
   const calculateResult = () => {
@@ -25,7 +26,7 @@ function App() {
         <div>
           <button onClick={() => handleButtonClick('(')}>(</button>
           <button onClick={() => handleButtonClick(')')}>)</button>
-          <button onClick={() => handleClear()}>DE</button>
+          <button onClick={() => handleClear()}><i class="fa-solid fa-delete-left"></i></button>
           <button onClick={() => handleButtonClick('/')} aria-label="divide">
             <i className="fa-solid fa-divide"></i>
           </button>
