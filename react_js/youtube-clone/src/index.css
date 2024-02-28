@@ -9,3 +9,14 @@ body{
   background-color: black;
   color: #fff;
 }
+a{
+  text-decoration: none;
+  color: #5a5a5a;
+}
+img{
+  cursor: pointer;
+}
+.flex-div{
+  display: flex;
+  align-items: center;
+}
