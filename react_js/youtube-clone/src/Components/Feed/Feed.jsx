@@ -1,116 +1,36 @@
-import React from 'react'
-import './Feed.css'
-import thumbnail1 from '../../assets/thumbnail1.png'
-import thumbnail2 from '../../assets/thumbnail2.png'
-import thumbnail3 from '../../assets/thumbnail3.png'
-import thumbnail4 from '../../assets/thumbnail4.png'
-import thumbnail5 from '../../assets/thumbnail5.png'
-import thumbnail6 from '../../assets/thumbnail6.png'
-import thumbnail7 from '../../assets/thumbnail7.png'
-import thumbnail8 from '../../assets/thumbnail8.png'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import './Feed.css';
+import thumbnail1 from '../../assets/thumbnail1.png';
+import { Link } from 'react-router-dom';
+import { API_KEY, value_converter } from '../../data';
+import moment, { isMoment } from 'moment';
 
-const Feed = ({category}) => {
-  return (
-    <div className='feed'>
-        <Link to={`video/20/4521`} className="card">
-            <img src={thumbnail1} alt="video thumbnail" />
-            <h2>Trending Places Abroad</h2>
-            <h3>Travel Anywhere</h3>
-            <p>2.5M views &bull; 3 years ago</p>
-        </Link>
-        <div className="card">
-            <img src={thumbnail2} alt="video thumbnail" />
-            <h2>Trending Places Abroad</h2>
-            <h3>Travel Anywhere</h3>
-            <p>2.5M views &bull; 3 years ago</p>
-        </div>
-        <div className="card">
-            <img src={thumbnail3} alt="video thumbnail" />
-            <h2>Trending Places Abroad</h2>
-            <h3>Travel Anywhere</h3>
-            <p>2.5M views &bull; 3 years ago</p>
-        </div>
-        <div className="card">
-            <img src={thumbnail4} alt="video thumbnail" />
-            <h2>Trending Places Abroad</h2>
-            <h3>Travel Anywhere</h3>
-            <p>2.5M views &bull; 3 years ago</p>
-        </div>
-        <div className="card">
-            <img src={thumbnail5} alt="video thumbnail" />
-            <h2>Trending Places Abroad</h2>
-            <h3>Travel Anywhere</h3>
-            <p>2.5M views &bull; 3 years ago</p>
-        </div>
-        <div className="card">
-            <img src={thumbnail6} alt="video thumbnail" />
-            <h2>Trending Places Abroad</h2>
-            <h3>Travel Anywhere</h3>
-            <p>2.5M views &bull; 3 years ago</p>
-        </div>
-        <div className="card">
-            <img src={thumbnail7} alt="video thumbnail" />
-            <h2>Trending Places Abroad</h2>
-            <h3>Travel Anywhere</h3>
-            <p>2.5M views &bull; 3 years ago</p>
-        </div>
-        <div className="card">
-            <img src={thumbnail8} alt="video thumbnail" />
-            <h2>Trending Places Abroad</h2>
-            <h3>Travel Anywhere</h3>
-            <p>2.5M views &bull; 3 years ago</p>
-        </div>
-        <div className="card">
-            <img src={thumbnail1} alt="video thumbnail" />
-            <h2>Trending Places Abroad</h2>
-            <h3>Travel Anywhere</h3>
-            <p>2.5M views &bull; 3 years ago</p>
-        </div>
-        <div className="card">
-            <img src={thumbnail2} alt="video thumbnail" />
-            <h2>Trending Places Abroad</h2>
-            <h3>Travel Anywhere</h3>
-            <p>2.5M views &bull; 3 years ago</p>
-        </div>
-        <div className="card">
-            <img src={thumbnail3} alt="video thumbnail" />
-            <h2>Trending Places Abroad</h2>
-            <h3>Travel Anywhere</h3>
-            <p>2.5M views &bull; 3 years ago</p>
-        </div>
-        <div className="card">
-            <img src={thumbnail4} alt="video thumbnail" />
-            <h2>Trending Places Abroad</h2>
-            <h3>Travel Anywhere</h3>
-            <p>2.5M views &bull; 3 years ago</p>
-        </div>
-        <div className="card">
-            <img src={thumbnail5} alt="video thumbnail" />
-            <h2>Trending Places Abroad</h2>
-            <h3>Travel Anywhere</h3>
-            <p>2.5M views &bull; 3 years ago</p>
-        </div>
-        <div className="card">
-            <img src={thumbnail6} alt="video thumbnail" />
-            <h2>Trending Places Abroad</h2>
-            <h3>Travel Anywhere</h3>
-            <p>2.5M views &bull; 3 years ago</p>
-        </div>
-        <div className="card">
-            <img src={thumbnail7} alt="video thumbnail" />
-            <h2>Trending Places Abroad</h2>
-            <h3>Travel Anywhere</h3>
-            <p>2.5M views &bull; 3 years ago</p>
-        </div>
-        <div className="card">
-            <img src={thumbnail8} alt="video thumbnail" />
-            <h2>Trending Places Abroad</h2>
-            <h3>Travel Anywhere</h3>
-            <p>2.5M views &bull; 3 years ago</p>
-        </div>
-    </div>
-  )
-}
+const Feed = ({ category }) => {
+    const [data, setData] = useState([]);
 
-export default Feed
+    const fetchData = async () => {
+        const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`;
+        const response = await fetch(videoList_url);
+        const jsonData = await response.json();
+        setData(jsonData.items);
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, [category]);
+
+    return (
+        <div className='feed'>
+            {data.map((item, index) => (
+                <Link to={`/video/${item.snippet.categoryId}/${item.id}`} className="card" key={index}>
+                    <img src={item.snippet.thumbnails.medium.url} alt="video thumbnail" />
+                    <h2>{item.snippet.title}</h2>
+                    <h3>{item.snippet.channelTitle}</h3>
+                    <p>{value_converter(item.statistics.viewCount)} views &bull; {item.snippet.publishedAt}</p>
+                </Link>
+            ))}
+        </div>
+    );
+};
+
+export default Feed;
