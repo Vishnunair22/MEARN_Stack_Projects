@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import './Recommended.css';
 import { API_KEY, value_converter } from '../../data';
 import thumbnail1 from '../../assets/thumbnail1.png';
@@ -32,14 +33,14 @@ const Recommended = ({ categoryId }) => {
     return (
         <div className='recommended'>
             {apiData.map((item, index) => (
-                <div className="side-video-list" key={index}>
+                <Link to={`/video/${item.snippet.categoryId}/${item.id}`} className="side-video-list" key={index}>
                     <img src={item.snippet.thumbnails.medium.url} alt="video thumbnail" />
                     <div className="vid-info">
                         <h3>{item.snippet.title}</h3>
                         <p>{item.snippet.channelTitle}</p>
                         <p>{value_converter(item.statistics.viewCount)} views</p>
                     </div>
-                </div>
+                </Link>
             ))}
         </div>
     );

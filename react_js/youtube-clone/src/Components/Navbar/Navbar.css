@@ -36,3 +36,18 @@ nav{
 .nav-right .user-icon{
     border-radius: 50%;
 }
+@media (max-width: 900px) {
+    .nav-left .menu-icon {
+        max-width: 0px;
+    }
+    .nav-right img {
+        display: none;
+    }
+    .nav-right .user-icon {
+        display: block;
+        width: 30px;
+    }
+    .logo{
+        width: 90px;
+    }
+}
