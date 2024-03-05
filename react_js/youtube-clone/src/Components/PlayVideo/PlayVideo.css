@@ -1,9 +1,11 @@
 .play-video{
     flex-basis: 69%;
 }
-.play-video video{
+.play-video iframe{
     width: 100%;
     border-radius: 10px;
+    height: 37vw;
+    border: 0;
 }
 .play-video h3{
     margin-top: 10px;
@@ -64,16 +66,16 @@
     border-radius: 5px;
     font-size: 20px;
 }
-.vid-discription{
+.vid-description{
     padding-left: 55px;
     margin: 15px 0;
 }
-.vid-discription p{
+.vid-description p{
     font-size: 16px;
     margin-bottom: 5px;
     color: #5a5a5a;
 }
-.vid-discription h4{
+.vid-description h4{
     font-size: 16px;
     color: #5a5a5a;
     margin-top: 15px;
