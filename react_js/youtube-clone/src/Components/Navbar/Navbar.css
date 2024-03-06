@@ -38,7 +38,7 @@ nav{
 }
 @media (max-width: 900px) {
     .nav-left .menu-icon {
-        max-width: 0px;
+        display: 0px;
     }
     .nav-right img {
         display: none;
