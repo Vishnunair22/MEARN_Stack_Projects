@@ -45,9 +45,3 @@
     padding-bottom: 10px;
     border-bottom: 3px solid #ccc;
 }
-@media(max-width:900px){
-    .sidebar{
-        display: none;
-    }
-    }
-}

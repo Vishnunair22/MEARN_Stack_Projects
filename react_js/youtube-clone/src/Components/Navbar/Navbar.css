@@ -44,19 +44,3 @@
 .nav-right .user-icon {
     border-radius: 50%;
 }
-
-@media (max-width: 900px) {
-    .nav-left .menu-icon {
-        display: none; /* Changed from '0px' to 'none' */
-    }
-    .nav-right img {
-        display: none;
-    }
-    .nav-right .user-icon {
-        display: block;
-        width: 30px;
-    }
-    .nav-left .logo { /* Added .nav-left class here */
-        width: 90px;
-    }
-}
