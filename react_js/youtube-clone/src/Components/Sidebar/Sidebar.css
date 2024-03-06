@@ -45,3 +45,8 @@
     padding-bottom: 10px;
     border-bottom: 3px solid #ccc;
 }
+@media only screen and (max-width: 767px) {
+    .sidebar{
+        display: none;
+    }
+}
