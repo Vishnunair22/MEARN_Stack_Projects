@@ -27,6 +27,12 @@ nav{
     color: white;
     padding: 0 10px;
 }
+.nav-links a:hover{
+    background: green;
+    color: #fff;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
 .nav-links button{
     border: 0;
     outline: 0;
@@ -36,4 +42,7 @@ nav{
     padding: 5px 5px;
     border-radius: 10px;
     cursor: pointer;
+}
+.nav-links button:hover{
+    background: green;
 }

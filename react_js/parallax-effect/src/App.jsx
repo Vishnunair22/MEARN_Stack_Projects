@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Hero from './Components/Hero/Hero';
 import Options from './Components/Options/Options';
 import Carousel from './Components/Carousel/Carousel';
+import About from './Components/About/About';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Hero/>
       </header>
       <main>
+        <About/>
         <Options/>
       </main>
     </>

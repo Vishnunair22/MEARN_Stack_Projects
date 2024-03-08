@@ -1,0 +1,15 @@
+.content-box{
+    height: 100vh;
+}
+.txt h2{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    font-size: 50px;
+}
+.txt p{
+    position: absolute;
+    top: 28%;
+    left: 40%;
+    font-size: 24px;
+}

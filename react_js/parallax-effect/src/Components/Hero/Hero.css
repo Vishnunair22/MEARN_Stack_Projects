@@ -20,3 +20,6 @@
     padding: 10px 10px;
     cursor: pointer;
 }
+.txt button:hover{
+    background: green;
+}
