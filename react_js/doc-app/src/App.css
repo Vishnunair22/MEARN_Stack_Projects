@@ -1,0 +1,61 @@
+/* nav bar */
+nav{
+  width: 100%;
+  background-color: blue;
+  padding: 10px 50px;
+  color: #fff;
+}
+/* logo */
+nav .logo{
+  cursor: pointer;
+}
+nav .logo .icon{
+  font-size: 28px;
+}
+nav .logo .word1, .word2{
+  margin-left: 5px;
+  font-size: 28px;
+}
+.word1{
+  color: red;
+}
+.word2{
+  color: goldenrod;
+}
+/* main container */
+.doc-main{
+  text-align: center;
+}
+.doc-main h1{
+  margin-top: 200px;
+  font-size: 40px;
+}
+.add-docs{
+  border: 0;
+  outline: 0;
+  background-color: blue;
+  color: #fff;
+  font-size: 22px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.add-docs:hover{
+  background-color: green;
+}
+/* modal input */
+.add-input{
+  width: 90%;
+  height: 40px;
+  background: transparent;
+  border: 1px solid blue;
+  border-radius: 10px;
+  outline: 0;
+  padding: 10px;
+  font-size: 22px;
+}
+/* modal button */
+.button{
+  text-align: center;
+}
