@@ -3,15 +3,18 @@ import '../App.css';
 import Modal from './Modal';
 import { database } from './FirebaseConfig';
 import { addDoc, collection, onSnapshot } from 'firebase/firestore';
+import { useNavigate } from 'react-router-dom';
 
 const Docs = () => {
     const [title, setTitle] = useState('');
-    const [open, setOpen] = useState(false); 
+    const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
     const collectionRef = collection(database, 'docsData');
     const isMounted = useRef(false);
     const [docsData, setDocsData] = useState([]);
+    let navigate = useNavigate();
+
 
     const addData = () => {
         addDoc(collectionRef, {
@@ -21,25 +24,35 @@ const Docs = () => {
             alert('Data Added');
             handleClose();
         })
-        .catch(() => {
+        .catch((error) => {
+            console.error('Error adding document: ', error);
             alert('Cannot add data');
         });
     };
 
     const getData = () => {
-        onSnapshot(collectionRef, (data) => {
-            setDocsData(data.docs.map((doc) => {
-                return {...doc.data(), id: doc.id}
-            }))
-        })
+        onSnapshot(collectionRef, (querySnapshot) => {
+            const data = [];
+            querySnapshot.forEach((doc) => {
+                data.push({ ...doc.data(), id: doc.id });
+            });
+            setDocsData(data);
+        }, (error) => {
+            console.error('Error fetching documents: ', error);
+        });
     };
 
     useEffect(() => {
-        if(!isMounted.current){
+        if (!isMounted.current) {
             isMounted.current = true;
             getData();
         }
     }, []);
+
+    const getID = (id) => {
+        console.log(id);
+        navigate(`/editDocs/${id}`)
+    };
 
     return (
         <>
@@ -63,12 +76,12 @@ const Docs = () => {
                     title={title}
                     setTitle={setTitle}
                     addData={addData}
-                    handleClose={handleClose} // Pass handleClose to Modal
-                    />
+                    handleClose={handleClose}
+                />
                 <div className='grid-main'>
                     {docsData.map((doc) => {
                         return (
-                            <div key={doc.id} className='grid-child'>
+                            <div key={doc.id} className='grid-child' onClick={() => getID(doc.id)}>
                                 <p>{doc.title}</p>
                             </div>
                         );
