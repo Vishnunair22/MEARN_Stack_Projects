@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -19,28 +19,35 @@ const style = {
 export default function ModalComponent({
     open,
     setOpen,
+    title,
+    setTitle,
+    addData
 }) {
     const handleClose = () => setOpen(false);
 
     return (
-        <div>
-            <Modal
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-            >
-                <Box sx={style}>
-                    <input
-                        placeholder='Add the Title'
-                        className='add-input'/>
-                    <div className="button">
-                    <button className='add-docs'>
-                            Add a Document
-                        </button>
-                    </div>
-                </Box>
-            </Modal>
-        </div>
+        <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+        >
+            <Box sx={style}>
+                <Typography id="modal-modal-title" variant="h6" component="h2">
+                    Add a Title
+                </Typography>
+                <input
+                    placeholder='Enter the Title'
+                    className='add-input'
+                    value={title} 
+                    onChange={(e) => setTitle(e.target.value)}
+                />
+                <div className="button">
+                <Button variant='contained' onClick={addData}>
+                    Add a Document
+                </Button>
+                </div>
+            </Box>
+        </Modal>
     );
 }

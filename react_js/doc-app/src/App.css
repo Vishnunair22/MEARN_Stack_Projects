@@ -59,3 +59,22 @@ nav .logo .word1, .word2{
 .button{
   text-align: center;
 }
+/* grid */
+.grid-main{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  color: whitesmoke;
+  margin-top: 40px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.grid-child{
+  padding: 20px;
+  background-color: rgb(98, 98, 98);
+  width: 300px;
+  cursor: pointer;
+}
+.grid-child p{
+  font-size: 22px;
+}
