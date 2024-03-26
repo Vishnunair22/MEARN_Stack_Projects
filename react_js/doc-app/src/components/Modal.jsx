@@ -43,7 +43,7 @@ export default function ModalComponent({
                     onChange={(e) => setTitle(e.target.value)}
                 />
                 <div className="button">
-                <Button variant='contained' onClick={addData}>
+                <Button variant='contained' onClick={addData} className='modal-button'>
                     Add a Document
                 </Button>
                 </div>
