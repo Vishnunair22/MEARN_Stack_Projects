@@ -1,36 +1,45 @@
 /* nav bar */
-nav{
+nav {
   width: 100%;
   background-color: blue;
   padding: 10px 50px;
   color: #fff;
 }
+
 /* logo */
-nav .logo{
+nav .logo {
   cursor: pointer;
 }
-nav .logo .icon{
+
+nav .logo .icon {
   font-size: 28px;
 }
-nav .logo .word1, .word2{
+
+nav .logo .word1,
+nav .logo .word2 {
   margin-left: 5px;
   font-size: 28px;
 }
-.word1{
+
+.word1 {
   color: red;
 }
-.word2{
+
+.word2 {
   color: goldenrod;
 }
+
 /* main container */
-.doc-main{
+.doc-main {
   text-align: center;
 }
-.doc-main h1{
+
+.doc-main h1 {
   margin-top: 200px;
   font-size: 40px;
 }
-.add-docs{
+
+.add-docs {
   border: 0;
   outline: 0;
   background-color: blue;
@@ -41,11 +50,13 @@ nav .logo .word1, .word2{
   margin-top: 10px;
   cursor: pointer;
 }
-.add-docs:hover{
+
+.add-docs:hover {
   background-color: green;
 }
+
 /* modal input */
-.add-input{
+.add-input {
   width: 90%;
   height: 40px;
   background: transparent;
@@ -55,13 +66,15 @@ nav .logo .word1, .word2{
   padding: 10px;
   font-size: 22px;
 }
+
 /* modal button */
-.button{
+.button {
   text-align: center;
-  margin-top: 20px;d
+  margin-top: 20px;
 }
+
 /* grid */
-.grid-main{
+.grid-main {
   display: grid;
   grid-template-columns: auto auto auto auto;
   color: whitesmoke;
@@ -70,15 +83,17 @@ nav .logo .word1, .word2{
   justify-content: center;
 }
 
-.grid-child{
+.grid-child {
   padding: 20px;
   background-color: rgb(98, 98, 98);
   width: 300px;
   cursor: pointer;
 }
-.grid-child p{
+
+.grid-child p {
   font-size: 22px;
 }
+
 /* edit docs */
 .editDocs-main {
   font-family: 'Poppins', sans-serif;
